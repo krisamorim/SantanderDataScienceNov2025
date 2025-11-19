@@ -1,0 +1,83 @@
+1. git init — Inicializa um repositório Git
+Cria um novo repositório na pasta atual.
+Exemplo:
+git init
+
+2. git clone — Clona um repositório existente
+Copia um repositório remoto para sua máquina.
+Exemplo:
+git clone https://github.com/usuario/projeto.git
+
+
+2.1 git clone [url] [nome da pasta] — Clona um repositório existente dentro de uma pasta com nome especificado no final do comando
+Exemplo:
+git clone https://github.com/usuario/projeto.git pastaabc
+
+3. git status — Mostra o status dos arquivos
+Exibe arquivos modificados, adicionados e não rastreados.
+Exemplo:
+git status
+
+4. git add — Adiciona arquivos à área de stage
+Prepara arquivos para commit.
+Exemplo (adicionar tudo):
+git add .
+Exemplo (arquivo específico):
+git add index.html
+
+5. git commit — Registra alterações no repositório
+Salva as mudanças adicionadas com uma mensagem.
+Exemplo:
+git commit -m "Adiciona nova seção ao site"
+
+6. git push — Envia os commits para o repositório remoto
+Sobe suas alterações para o GitHub ou outro servidor.
+Exemplo:
+git push origin main
+
+7. git pull — Baixa atualizações do repositório remoto
+Atualiza seu repositório local com mudanças externas.
+Exemplo:
+git pull origin main
+
+8. git branch — Gerencia branches
+Listar, criar ou excluir ramos.
+Exemplos:
+git branch            # listar branches
+git branch feature-x  # criar nova branch
+
+9. git checkout — Troca de branch ou restaura arquivos
+Exemplo (mudar para outra branch):
+git checkout feature-x
+10. git switch — Alternativa moderna ao checkout para trocar de branch
+Exemplo:
+git switch main
+
+11. git merge — Mescla branches
+Integra uma branch à atual.
+Exemplo:
+git merge feature-x
+
+12. git log — Exibe histórico de commits
+Exemplo:
+git log
+Versão simplificada:
+git log --oneline
+
+13. git remote — Gerencia repositórios remotos
+Exemplo (listar remotos): git remote -v
+Exemplo (adicionar remoto): git remote add origin https://github.com/usuario/projeto.git
+
+14. git reset — Desfaz alterações na área de stage ou commits
+Exemplo (remover estágios sem apagar alterações):
+git reset index.html
+
+15. git revert — Reverte um commit sem perder histórico
+Exemplo:
+git revert 4f3c2ab
+
+16. git stash — Guarda alterações temporariamente
+Exemplo (guardar):
+git stash
+Exemplo (recuperar):
+git stash apply
