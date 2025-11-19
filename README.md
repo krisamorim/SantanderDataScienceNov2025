@@ -1,1 +1,2 @@
-![Logo do Projeto](imgs/imgDataScience.png)
+Projeto Bootcamp SANTANDER CIência de dados 🚀
+(imgs/imgDataScience.png
