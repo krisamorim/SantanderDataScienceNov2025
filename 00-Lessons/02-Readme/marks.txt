@@ -1,0 +1,95 @@
+Link:
+Como funciona / How it works: Escreva o texto que deseja entre colchetes [] e o link entre parênteses / Write the text you want between square brackets [] and the link between parentheses
+Marcação / mark: [Texto que irá apparecer aqui](http://linkDesejado.com) / [Text that will appear here](http://desiredlink.com)
+Ex / Eg: [Goole](http://www.google.com)
+
+Cabeçalho / header:
+Como funciona / How it works: Inicie a linha com # / Start the line with #
+Marcação / mark: # Texto do cabeçalho / text of the header
+Ex / eg: # Isso é um cabeçalho / This is a header
+
+Sub item / subitem:
+Iniciar linha com 2 # / start the line with 2 #
+Ex / eg: ## This is a subitem
+
+tabela / table:
+Como funciona / How it works: separe a colunas com o |
+more in https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github
+
+
+Exemplos / examples:
+1- 
+De / from: https://github.com/falvojr/speech2learning/blob/main/README.md?plain=1
+Descrição / description: Contêm item, subitem e fluxo dinâmico / The are items, subitems and dynamic flow
+
+
+# Arquitetura Speech2Learning (S2L)
+
+Este repositório documenta o doutorado de Venilton FalvoJr (@falvojr) e suas contribuições-chave: a Arquitetura Speech2Learning e duas instâncias desenvolvidas em colaboração com a EdTech DIO.
+
+A Speech2Learning .....
+
+## Mapeamento Sistemático da Literatura
+
+Antes de desenvolver...
+
+Em resumo, ...
+
+## Principais Influências
+
+A Arquitetura Spe...
+
+A grande aceitação ...
+
+Aqui está o diagrama da Arquitetura Speech2Learning para uma visualização mais clara:
+
+```mermaid
+graph RL;
+  subgraph layer-infra[Infraestrutura];
+    Web(Web) --> Con
+    Dis(Dispositivos) --> Con
+    UI("Interface do Usuário (UI)") <--> Pre
+    BD(Bancos de Dados) <--> Gat
+    EXT(Integrações Externas) <--> Gat
+
+    subgraph layer-adpaters[Adaptadores];
+      Con(Controllers) --> UC
+      Pre(Presenters) <--> UC
+      Gat(Gateways) -...-> |implementam| IGat
+
+      subgraph layer-app[Aplicação];
+        UC(Casos de Uso) <--> OA
+        UC <--> IGat
+
+        subgraph layer-entities[Entidades];
+          OA("Objetos de Aprendizagem (OA)")
+          OA -.- |contemplam| OAA(OA Audíveis)
+          OAA -.- |possuem| Meta(Metadados)
+          IGat(Interfaces de Gateways)
+          IGat -.- |contemplam| IRep(Interfaces de Repositórios)
+          IGat -.- |contemplam| IS2T(Interfaces de Reconhecimento de Fala)
+        end
+     end
+    end
+  end
+
+classDef infra fill:#a3c9ff,stroke:#00315c,color:#00315c;
+classDef adapters fill:#67dbb1,stroke:#003828,color:#003828;
+classDef ucs fill:#ffb1c1,stroke:#5f112b,color:#5f112b;
+classDef entities fill:#e2c54b,stroke:#3a3000,color:#3a3000;
+classDef entities_secondary fill:#fff0c0,stroke:#3a3000,color:#3a3000,stroke-dasharray: 4 4;
+
+class Web,Dis,BD,EXT,UI infra;
+class Con,Pre,Gat adapters;
+class UC ucs;
+class OA,OAA,Meta,IGat,IRep,IS2T entities;
+class OAA,Meta,IRep,IS2T entities_secondary;
+```
+
+## Instâncias da Speech2Learning
+
+Aqui estão as duas instâncias criadas como mecanismos de avaliação indireta da Arquitetura Speech2Learning:
+
+1. **Legendas Automáticas de Videoaulas**: Inclui Prova de Conceito (PoC), Estudo de Caso e uma pesquisa abrangente focada na qualidade das transcrições automáticas de importantes provedores de Speech-To-Text (STT) em todo o mundo.
+
+2. **Player de Vídeo com Design Acessível**: Envolve uma PoC e um Experimento com ênfase na qualidade do player de vídeo, especialmente para o público surdo, usando avatares de LIBRAS baseados em texto (a partir da transcrição das videoaulas).

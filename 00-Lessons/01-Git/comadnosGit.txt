@@ -13,6 +13,9 @@ git clone https://github.com/usuario/projeto.git
 Exemplo:
 git clone https://github.com/usuario/projeto.git pastaabc
 
+2.1 git clone URL --branch feature-1 --single-branch - clona de uma branch especifica
+
+
 3. git status — Mostra o status dos arquivos
 Exibe arquivos modificados, adicionados e não rastreados.
 Exemplo:
@@ -81,3 +84,5 @@ Exemplo (guardar):
 git stash
 Exemplo (recuperar):
 git stash apply
+
+17. echo resumo/ > .gitignore - adiciona a apsta resumo no gitignore
