@@ -15,7 +15,7 @@ git clone https://github.com/usuario/projeto.git
 Exemplo:
 git clone https://github.com/usuario/projeto.git pastaabc
 
-2.1 git clone URL --branch feature-1 --single-branch - clona de uma branch especifica
+2.1 git clone URL --branch NomeDaBranch --single-branch - clona de uma branch especifica
 
 
 3. git status — Mostra o status dos arquivos
@@ -55,12 +55,14 @@ Listar, criar ou excluir ramos.
 Exemplos:
 git branch            # listar branches
 git branch feature-x  # criar nova branch
-
+git branch -v # lista os últimso comandos de cada branch
+git branch -d nomeDaBranch #exclui uma branch
 
 9. git checkout — Troca de branch ou restaura arquivos
-Exemplo (mudar para outra branch):
-git checkout feature-x
-
+Exemplo (criar e mudar para outra branch):
+git checkout -b nomeDesejadoParaBranch
+Exemplo (retornar para main)
+git checkout main
 
 10. git switch — Alternativa moderna ao checkout para trocar de branch
 Exemplo:
@@ -70,7 +72,7 @@ git switch main
 11. git merge — Mescla branches
 Integra uma branch à atual.
 Exemplo:
-git merge feature-x
+git merge nomeDaBranch
 
 
 12. git log — Exibe histórico de commits
@@ -78,6 +80,8 @@ Exemplo:
 git log
 Versão simplificada:
 git log --oneline
+
+12.1 git reflog - log de TODAS as alterações. Até mesmo registro de ações de restore
 
 
 13. git remote — Gerencia repositórios remotos
@@ -89,6 +93,9 @@ Exemplo (adicionar remoto): git remote add origin https://github.com/usuario/pro
 Exemplo (remover estágios sem apagar alterações):
 git reset index.html
 
+14.1 git reset --soft hashDoComitDesejado - restaura o código para o commit desejado sem apagar os arquivos da stage altera
+
+14.2 git reset --hard hashDoComitDesejado - restaura o código para o commit desejado e APAGA os arquivos da stage altera
 
 15. git revert — Reverte um commit sem perder histórico
 Exemplo:
@@ -100,6 +107,8 @@ Exemplo (guardar):
 git stash
 Exemplo (recuperar):
 git stash apply
+Emxemplo (listar):
+git stash list
 
 
 17. echo resumo/ > .gitignore - adiciona a apsta resumo no gitignore
@@ -110,3 +119,17 @@ git stash apply
 
 19. git restore NomeDoArquivo - caso edite um arquivo e salve sem querer e queira restaura o arquivo
 
+19.1 git restore --staged - remove o arquivo do stage area (desfaz o git add .)
+
+
+20. git commit --amend -m "comentário desejado" - altera o comentário do último commit
+
+20.1 git commit --amned - aber o editor de texto para alterar o comentário
+
+
+21. git fetch origin main - baixa as alterações sem mesclar com o respositorio local
+
+
+22 git diff main origin/main - verificar diferença entre a main local e origin/main
+
+Material de apoio: elidianaandrade/dio-curso-git-github
