@@ -1,6 +1,6 @@
 # Bootcamp Santander | Data scientist / Ciência de dados  🚀
 
-EN: Skills acquired at the Santander bootcamp for data scientists
+EN: Skills acquired at the Santander bootcamp for data scientists<br>
 PT: Habilidades adquiridas no bootcamp Santander para cientista de dados
 
 ## Lessons / Lições 📖
