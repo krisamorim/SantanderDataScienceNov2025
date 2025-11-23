@@ -8,12 +8,19 @@ print("Hello, my name is {}. I am {} years old and I love {}.".format(name, age,
 #using indexes
 print("Hello, my name is {2}. I am {2} years old and I love {2}.".format(name, age, language))
 
+#seting variables
+print("Hello, my name is {n}. I am {i} years old and I love {l}.".format(n=name, i=age, l=language))
+
+#using dictionary
+info = {'name': 'Ana', 'age': '27', 'language': 'English'}
+print("Hello, my name is {name}. I am {age} years old and I love {language}.".format(**info))
+
 #second way using f-strings
 print(f"Hello, my name is {name}. I am {age} years old and I love {language}.")
 
 #formatting decimal places
 pi = 3.14159265359
-print("The value of pi is approximately {:.2f}.".format(pi))
+print("The value 3.14159265359 using "+'{:.2f}'," is {:.2f} (2 places after dot).".format(pi))
 print(f"The value of pi is approximately {pi:.3f}.")
 #padding and alignment
 number = 42
