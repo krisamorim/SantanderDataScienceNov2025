@@ -8,7 +8,9 @@ PT: Habilidades adquiridas no bootcamp Santander para cientista de dados
 | Lesson/Lição | Resume/Resumo|
 |--------------|--------------|
 | Lesson 1 / Lição 1 | Version control with git / Versionamento com git |
-| Lesson 2 / Lição 2 | Operators / operadores |
+| Lesson 2 / Lição 2 | Creating md files / Criando arquivo md |
+| Lesson 3 / Lição 3 | coding wit python / Programação com Python |
+| Lesson 4 / Lição 4 | Database / Banco de dados |
 
 ![Logo do Projeto](imgs/imgDataScience.png)
 
